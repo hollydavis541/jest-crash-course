@@ -1,0 +1,23 @@
+{
+  "name": "jest-crash-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollydavis541/jest-crash-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hollydavis541/jest-crash-course/issues"
+  },
+  "homepage": "https://github.com/hollydavis541/jest-crash-course#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
