@@ -1,4 +1,4 @@
-const filterByTerm = require("../src/filterByTerm");
+const filterByTerm = require('../src/filterByTerm');
 
 describe('Filter function', () => {
   const input = [
@@ -18,8 +18,8 @@ describe('Filter function', () => {
     expect(filterByTerm(input, 'uRl')).toEqual(output);
   });
   test('empty search throws error', () => {
-    
-    const output = Error('searchTerm cannot be empty');
-    expect(() => filterByTerm(input, '').toThrowError(output));
+    expect(() => {
+      filterByTerm(input, '');
+    }).toThrowError(Error('searchTerm cannot be empty'));
   });
 });
