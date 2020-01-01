@@ -1,9 +1,4 @@
-function filterByTerm(inputArr, searchTerm) {
-  const regex = new RegExp(searchTerm, 'i');
-  return inputArr.filter(function(arrayElement) {
-    return arrayElement.url.match(regex);
-  });
-}
+const filterByTerm = require("../src/filterByTerm");
 
 describe('Filter function', () => {
   const input = [
@@ -22,9 +17,9 @@ describe('Filter function', () => {
     const output = [{ id: 1, url: 'https://www.url1.dev' }, { id: 2, url: 'https://www.url2.dev' }];
     expect(filterByTerm(input, 'uRl')).toEqual(output);
   });
-  test('empty search term returns all urls', () => {
-
-    const output = [{ id: 1, url: 'https://www.url1.dev' }, { id: 2, url: 'https://www.url2.dev' }, { id: 3, url: 'https://www.link3.dev' }];
-    expect(filterByTerm(input, '')).toEqual(output);
+  test('empty search throws error', () => {
+    
+    const output = Error('searchTerm cannot be empty');
+    expect(() => filterByTerm(input, '').toThrowError(output));
   });
 });
